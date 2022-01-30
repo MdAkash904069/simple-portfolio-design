@@ -1,0 +1,178 @@
+body,h1,h2,h3,h4,h5,h6,div,span{
+	font-family: 'Open Sans', sans-serif;
+}
+.cover-img{
+	position: relative;
+	z-index: 1
+}
+.cover-img::after{
+	content: "";
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-color: #39383885;
+	width: 100%;
+	height: 100%;
+	z-index: -1
+}
+.slider-caption{
+	z-index: 1;
+}
+
+
+/*image hover style*/
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 99;
+}
+
+
+
+/* portfolio ============================== */
+.portfolio::after {
+  content: '';
+  width: calc(100% - 3rem);
+  height: calc(100% - 3rem);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 90;
+  transition: all 0.3s;
+  transform: scale(1.1);
+  opacity: 0;
+  display: block;
+  opacity: 0;
+}
+
+.portfolio-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 99;
+}
+
+.portfolio-description {
+  opacity: 0;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.portfolio img {
+  width: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio .hover-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.portfolio:hover img {
+  width: 100%;
+}
+
+.portfolio:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.portfolio:hover .portfolio-description {
+  opacity: 1;
+  transform: none;
+}
+
+.portfolio:hover .hover-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* about image ============================== */
+.about img {
+  width: 110%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about .hover-overlay {
+  /*background: rgba(0, 0, 0, 0.4);*/
+  z-index: 90;
+}
+
+.about-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 3rem;
+  z-index: 99;
+}
+
+.about-description {
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+  text-align: right;
+  border-right: 3px solid #fff;
+  padding: 0 1rem;
+  z-index: 99;
+  transform: translateX(-1.5rem);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@media (min-width: 992px) {
+  .about-description {
+    width: 50%;
+  }
+}
+
+.about:hover img {
+  width: 100%;
+}
+
+.about:hover::after {
+  opacity: 1;
+  transform: none;
+}
+
+.about:hover .about-description {
+  opacity: 1;
+  transform: none;
+}
+
+.about:hover .hover-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
